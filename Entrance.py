@@ -4,11 +4,9 @@ import time
 import os
 from apscheduler.schedulers.blocking import BlockingScheduler
 
-scheduler = BlockingScheduler()
 
 def everyday_crawler_job():
     print(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
-    # subprocess.call("python Crawler.py")
     os.system("python Crawler.py")
 
 sched = BlockingScheduler()
